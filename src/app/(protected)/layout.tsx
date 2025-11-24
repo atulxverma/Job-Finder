@@ -2,7 +2,7 @@
 
 import Header from "@/components/header/header";
 import { createContext, ReactNode, useEffect, useState } from "react";
-import { Company, User } from "../../../generated/prisma";
+import { Company, User } from "@prisma/client";
 
 export const UserContext = createContext<{
     user: (User & { company: Company | null }) | null,

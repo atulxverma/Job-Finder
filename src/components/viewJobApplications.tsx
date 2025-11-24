@@ -2,9 +2,8 @@
 import { useContext, useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
 import { Card } from "./ui/card";
-import { Badge } from "./ui/badge";
 import { LoaderPinwheelIcon, Trash2 } from "lucide-react";
-import { Application, Company, Openings, User } from "../../generated/prisma";
+import { Application, Company, Openings, User } from "@prisma/client";
 import { UserContext } from "@/app/(protected)/layout";
 import { Button } from "./ui/button";
 import { toast } from "sonner";

@@ -3,7 +3,7 @@ import { UserContext } from "@/app/(protected)/layout";
 import { Heart, LucideLoaderPinwheel, Trash2 } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
 import { toast } from "sonner";
-import { Review, User } from "../../generated/prisma";
+import { Review, User } from "@prisma/client";
 import AddReviewForm from "./addReviewForm";
 import JobCard, { OpeningWithCompany } from "./jobCard";
 import { Badge } from "./ui/badge";

@@ -59,7 +59,7 @@ export function HeaderDropdown() {
                 {
                     user?.company &&
                     <>
-                        <DropdownMenuItem onClick={() => router.push("/company/" + user.company.id)}>
+                        <DropdownMenuItem onClick={() => router.push("/company/" + user?.company!.id)}>
                             View Company
                         </DropdownMenuItem>
                     </>

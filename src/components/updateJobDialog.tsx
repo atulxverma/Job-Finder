@@ -16,7 +16,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
-import { Openings } from "../../generated/prisma";
+import { Openings } from "@prisma/client";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
 export default function UpdateJobDialog({ job }: {
@@ -27,7 +27,7 @@ export default function UpdateJobDialog({ job }: {
     const [open, setOpen] = useState(false);
 
     const [title, setTitle] = useState(job.title);
-    const [description, setDescription] = useState(job.description);
+    const [description, setDescription] = useState(job?.description || "");
     const [location, setLocation] = useState(job.location);
     const [salary, setSalary] = useState(job.salary);
     const [jobType, setJobType] = useState(job.job_type);
@@ -79,7 +79,7 @@ export default function UpdateJobDialog({ job }: {
                 <div className="grid gap-4 py-4">
                     <div className="grid grid-cols-4 items-center gap-4">
                         <Label htmlFor="title" className="text-right">Title</Label>
-                        <Input id="title" value={title} onChange={(e) => setTitle(e.target.value)} className="col-span-3" />
+                        <Input id="title" value={title?? ""} onChange={(e) => setTitle(e.target.value)} className="col-span-3" />
                     </div>
                     <div className="grid grid-cols-4 items-start gap-4">
                         <Label htmlFor="description" className="text-right pt-2">Description</Label>

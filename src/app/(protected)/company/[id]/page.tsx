@@ -3,7 +3,7 @@ import CompanyReviewsAndJobContainer from "@/components/company-reviews-job-cont
 import DeleteCompanyButton from "@/components/deleteCompanyBtn";
 import { useParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
-import { Company, User } from "../../../../../generated/prisma";
+import { Company, User } from "@prisma/client"
 import { UserContext } from "../../layout";
 
 export default function Page() {

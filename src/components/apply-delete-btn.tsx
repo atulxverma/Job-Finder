@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import { toast } from "sonner";
-import { Openings } from "../../generated/prisma";
+import { Openings } from "@prisma/client";
 import JobApplyButton from "./jobApplyBtn";
 import { Button } from "./ui/button";
 

@@ -3,7 +3,6 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { FormEvent, useContext, useState } from "react";
-import { Job } from "../../../../generated/prisma";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { UserContext } from "../layout";
@@ -34,7 +33,7 @@ export default function Page() {
             salary: jSalary,
             job_type: jobType,
             employment_type: employmentType,
-            company_id: user.company.id
+            company_id: user!.company!.id
         }
 
         const resp = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/job`, {

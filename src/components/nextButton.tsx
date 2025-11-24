@@ -2,7 +2,6 @@
 import { ArrowRightCircleIcon } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/router";
-import { Job } from "../../generated/prisma";
 
 export default function(){
     const router= useRouter();

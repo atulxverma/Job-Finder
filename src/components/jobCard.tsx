@@ -1,6 +1,6 @@
 import { MapPin } from "lucide-react";
 import Link from "next/link";
-import { Openings, Company } from "../../generated/prisma";
+import { Openings, Company } from "@prisma/client";
 import { Badge } from "./ui/badge";
 import {
     Card,

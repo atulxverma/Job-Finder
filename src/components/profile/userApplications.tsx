@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader } from "../ui/card";
 import JobCard from "../jobCard";
-import { Application, Openings } from "../../../generated/prisma";
+import { Application, Openings } from "@prisma/client";
 
 type ApplicationWithUser = Application & { job: Openings };
 export default function UserApplications({ user_id }: {

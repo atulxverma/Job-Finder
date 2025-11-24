@@ -2,7 +2,7 @@
 import { Send } from "lucide-react";
 import { Button } from "./ui/button";
 import { toast } from "sonner";
-import { Openings } from "../../generated/prisma";
+import { Openings } from "@prisma/client";
 
 export default function JobApplyButton({ job, setUserHasApplied }:{
     job: Openings,

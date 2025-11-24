@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Search } from "lucide-react"
 import { useEffect, useState } from "react"
-import { Openings } from "../../generated/prisma"
+import { Openings } from "@prisma/client";
 
 export function SearchInput() {
   const [input, setInput] = useState("");
